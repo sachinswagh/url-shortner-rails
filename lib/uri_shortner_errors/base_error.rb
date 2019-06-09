@@ -22,7 +22,6 @@ module UriShortnerErrors
 
     def notify!
       write_to_log!
-      Raven.capture_message(self, extra: { parameters: params }) if notify_handler
     end
 
     # Use the parameter filters set up in the application config when we log.
